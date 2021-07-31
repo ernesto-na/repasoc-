@@ -17,6 +17,14 @@ class Cliente
              edad=18;
              montoCuenta=0.0;
              }
+             Cliente(string nombre,string apellidoP, string apellidoM,int edad,float montoCuenta)
+             {
+              setNombre(nombre);
+              setApellidoP(apellidoP);
+              setApellidoM(apellidoM);
+              setEdad(edad);
+              setMontoCuenta(montoCuenta);
+              }
     void setNombre(string nombre)
              {
                   this->nombre=nombre.length()<=30?nombre:"Error";
@@ -61,4 +69,4 @@ class Cliente
 
 
 
-}
+};
