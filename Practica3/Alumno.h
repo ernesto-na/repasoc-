@@ -7,6 +7,7 @@ class Alumno
       private:
               string nombre,apellidoP, sexo;
               int edad,numeroCtrlEscolar,semestre,idMateria;
+              int arregloIdMaterias[10];
               //Materia *materia;
 
       public:
@@ -30,7 +31,7 @@ class Alumno
               setSemestre(semestre);
               setIdMateria(idMateria);
               }
-               /*Alumno(string nombre,string apellidoP, string sexo,int edad,int numeroCtrlEscolar,int semestre,Materia *materia)
+               Alumno(string nombre,string apellidoP, string sexo,int edad,int numeroCtrlEscolar,int semestre,int idMateria,int  i, int j  )
              {
               setNombre(nombre);
               setApellidoP(apellidoP);
@@ -38,8 +39,9 @@ class Alumno
               setEdad(edad);
               setNumeroCtrlEscolar(numeroCtrlEscolar);
               setSemestre(semestre);
-              setMateria(materia);
-              }*/
+              setIdMateria(idMateria);
+              setIdArregloIdMaterias(i,j);
+              }
     void setNombre(string nombre)
              {
                   this->nombre=nombre.length()<=30?nombre:"Error";
@@ -90,14 +92,16 @@ class Alumno
              {
                  return semestre;
              }
-    /*void setMateria(Materia *materia)
+
+   void setIdArregloIdMaterias (int n, int position)
       {
-           this->materia=materia;
+        arregloIdMaterias[position] = n;
       }
-    Materia* getMateria()
+
+  int getIdArregloIdMaterias (int position)
       {
-      return materia;
-      }*/
+        return arregloIdMaterias[position];
+      }
 
     void setIdMateria(int idMateria)
              {
