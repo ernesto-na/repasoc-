@@ -35,8 +35,9 @@ void leerAlumnos(){
                 cin>>auxSemestre;
                 cout<<"\tEscriba las materias ";
                 cin>>auxIdMateria;
-                Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria);
+                //Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria);
               // Alumno alumno(auxNombre,"cena","masculino",45,100,8);
+              Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,12);
                     cout<<"---iA->"<<indiceAlumnos<<"..elementos.."<<elementos;
 
                 arregloAlumnos[indiceAlumnos] = alumno;
@@ -58,6 +59,7 @@ void leerAlumnos(){
                         cout<<"\tSu Boleta es: "<<arregloAlumnos[i].getNumeroCtrlEscolar()<<endl;
                         cout<<"\tSu Semestre es: "<<arregloAlumnos[i].getSemestre()<<endl;
                          cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdMateria()<<endl;
+                         cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdArregloIdMaterias(0)<<endl;
                         cout<<"\n-------------------------------------------------------------------------";
                     //}
                 }
