@@ -93,7 +93,7 @@ class Alumno
                  return semestre;
              }
 
-   void setIdArregloIdMaterias (int n, int position)
+   void setIdArregloIdMaterias (int position,int n)
       {
         arregloIdMaterias[position] = n;
       }

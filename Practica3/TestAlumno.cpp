@@ -37,7 +37,8 @@ void leerAlumnos(){
                 cin>>auxIdMateria;
                 //Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria);
               // Alumno alumno(auxNombre,"cena","masculino",45,100,8);
-              Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,12);
+              Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,auxIdMateria);
+              cout<<"materias"<<alumno.getIdArregloIdMaterias(0);
                     cout<<"---iA->"<<indiceAlumnos<<"..elementos.."<<elementos;
 
                 arregloAlumnos[indiceAlumnos] = alumno;
