@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include<iostream>
-//#include"Materias.h"
+//#include"Materia.h"
 using namespace std;
 class Alumno
 {
       private:
-              string nombre,apellidoP, sexo/*Materias *materias[100]*/;
-              int edad,numeroCtrlEscolar,semestre;
+              string nombre,apellidoP, sexo;
+              int edad,numeroCtrlEscolar,semestre,idMateria;
+              //Materia *materia;
 
       public:
              Alumno()
@@ -17,8 +18,9 @@ class Alumno
              edad=18;
              numeroCtrlEscolar=0.0;
              semestre=0;
+             idMateria=0;
              }
-             Alumno(string nombre,string apellidoP, string sexo,int edad,int numeroCtrlEscolar,int semestre)
+             Alumno(string nombre,string apellidoP, string sexo,int edad,int numeroCtrlEscolar,int semestre,int idMateria )
              {
               setNombre(nombre);
               setApellidoP(apellidoP);
@@ -26,7 +28,18 @@ class Alumno
               setEdad(edad);
               setNumeroCtrlEscolar(numeroCtrlEscolar);
               setSemestre(semestre);
+              setIdMateria(idMateria);
               }
+               /*Alumno(string nombre,string apellidoP, string sexo,int edad,int numeroCtrlEscolar,int semestre,Materia *materia)
+             {
+              setNombre(nombre);
+              setApellidoP(apellidoP);
+              setSexo(sexo);
+              setEdad(edad);
+              setNumeroCtrlEscolar(numeroCtrlEscolar);
+              setSemestre(semestre);
+              setMateria(materia);
+              }*/
     void setNombre(string nombre)
              {
                   this->nombre=nombre.length()<=30?nombre:"Error";
@@ -52,22 +65,7 @@ class Alumno
              {
                     return sexo;
              }
-    /*void setNumMAterias(string numMaterias)
-             {
-                  this->numMaterias=numMaterias.length()<=25?numMaterias:"Error";
-             }
-    string getNumMaterias()
-             {
-                    return numMaterias;
-             }
-    void setMaterias(string materias)
-             {
-                  this->materias=materias;
-             }
-    string getMaterias()
-             {
-                    return materias;
-             }*/
+
     void setEdad(int edad)
              {
                   this->edad=edad>=0 && edad<=100?edad:-1;
@@ -91,5 +89,22 @@ class Alumno
     int getSemestre()
              {
                  return semestre;
+             }
+    /*void setMateria(Materia *materia)
+      {
+           this->materia=materia;
+      }
+    Materia* getMateria()
+      {
+      return materia;
+      }*/
+
+    void setIdMateria(int idMateria)
+             {
+                  this->idMateria=idMateria>=0 && idMateria<=100?idMateria:-1;
+             }
+    int getIdMateria()
+             {
+                 return idMateria;
              }
 };
