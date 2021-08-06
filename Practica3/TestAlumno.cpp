@@ -33,20 +33,25 @@ void leerAlumnos(){
                 cin>>auxNumCtrlEscolar;
                 cout<<"\tEscribe el numero de semestre ";
                 cin>>auxSemestre;
-                cout<<"\tEscriba las materias ";
-                cin>>auxIdMateria;
-                //Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria);
+
+
+                Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria);
               // Alumno alumno(auxNombre,"cena","masculino",45,100,8);
-              Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,auxIdMateria);
-              cout<<"materias"<<alumno.getIdArregloIdMaterias(0);
-                    cout<<"---iA->"<<indiceAlumnos<<"..elementos.."<<elementos;
+              //Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,auxIdMateria);
+              for(int i=0; i<2; i++){
+                    cout<<"\tEscriba el ID de la materias ";
+                    cin>>auxIdMateria;
+                    alumno.setIdArregloIdMaterias(i,auxIdMateria);
+                }
+              //cout<<"materias"<<alumno.getIdArregloIdMaterias(0);
+                   // cout<<"---iA->"<<indiceAlumnos<<"..elementos.."<<elementos;
 
                 arregloAlumnos[indiceAlumnos] = alumno;
                 indiceAlumnos++;
-
-                //}
-
 }
+
+
+
         void validarAlumnos(){
 
                 string auxNombre;
@@ -59,8 +64,12 @@ void leerAlumnos(){
                         cout<<"\tSu edad es: "<<arregloAlumnos[i].getEdad()<<endl;
                         cout<<"\tSu Boleta es: "<<arregloAlumnos[i].getNumeroCtrlEscolar()<<endl;
                         cout<<"\tSu Semestre es: "<<arregloAlumnos[i].getSemestre()<<endl;
-                         cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdMateria()<<endl;
-                         cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdArregloIdMaterias(0)<<endl;
+                        //cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdMateria()<<endl;
+                         cout<<"\tSus materias son: "<<endl;
+                         for(int j=0; j<2; j++){
+
+                                cout<<"\t\tSu materia es: "<<arregloAlumnos[i].getIdArregloIdMaterias(j)<<endl;
+                                                }
                         cout<<"\n-------------------------------------------------------------------------";
                     //}
                 }
