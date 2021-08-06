@@ -55,8 +55,14 @@ void leerAlumnos(){
         void validarAlumnos(){
 
                 string auxNombre;
+                fflush(stdin);
+                cout<<"\n\tEscribe el nombre del cliente a buscar: ";
+                getline(cin,auxNombre);
+                cout<<"\n\tEscribe el nombre del cliente a buscar: "<<auxNombre;
+
                 for(int i=0; i<indiceAlumnos;i++){
                     //if(arregloAlumnos[i].getNombre()==auxNombre){
+                        if(arregloAlumnos[i].getNombre()==auxNombre){
                         cout<<"\n\n\n----------------------BD--ALUMNOS------------------------------------\n";
                         cout<<"\tEl nombre es: "<<arregloAlumnos[i].getNombre()<<endl;
                         cout<<"\tEl apellido paterno: "<<arregloAlumnos[i].getApellidoP()<<endl;
@@ -65,14 +71,23 @@ void leerAlumnos(){
                         cout<<"\tSu Boleta es: "<<arregloAlumnos[i].getNumeroCtrlEscolar()<<endl;
                         cout<<"\tSu Semestre es: "<<arregloAlumnos[i].getSemestre()<<endl;
                         //cout<<"\tSu id de materia es: "<<arregloAlumnos[i].getIdMateria()<<endl;
-                         cout<<"\tSus materias son: "<<endl;
-                         for(int j=0; j<2; j++){
+                         cout<<"\t-----------Sus materias son-------------: "<<endl;
+                         /*for(int j=0; j<2; j++){
 
                                 cout<<"\t\tSu materia es: "<<arregloAlumnos[i].getIdArregloIdMaterias(j)<<endl;
-                                                }
+                                                }*/
+                         for(int j=0; j<indiceMaterias;j++){
+                                cout<<"valor de j"<<j<<"materias"<<indiceMaterias;
+                                cout<<"\n\n\n----------------------------------------------------------\n";
+                                cout<<"\tLa materia es: "<<arregloMaterias[j].getNombre()<<endl;
+                                cout<<"\tEl profesor es: "<<arregloMaterias[j].getProfesor()<<endl;
+                                cout<<"\tLos creditos son: "<<arregloMaterias[j].getNumeroCreditos()<<endl;
+                                cout<<"\tSu id es: "<<arregloMaterias[j].getIdMateria()<<endl;
+                                cout<<"\n----------------------------------------------------------";
+                        }
                         cout<<"\n-------------------------------------------------------------------------";
                     //}
-                }
+                }}
         }
 
         void leerMaterias(){
