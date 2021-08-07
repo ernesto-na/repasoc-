@@ -78,30 +78,22 @@ void validarAlumnos() {
 
 			 cout<<"\t\tSu materia es: "<<arregloAlumnos[i].getIdArregloIdMaterias(j)<<endl;
 			 }*/
-			for (int j = 0; j < 5; j++) {
-				cout << "idMAteria" << arregloMaterias[j].getIdMateria()
-						<< "idAlumno "
-						<< arregloAlumnos[i].getIdArregloIdMaterias(j);
-				if (arregloMaterias[j].getIdMateria()
-						== arregloAlumnos[i].getIdArregloIdMaterias(j)) {
-					//cout<<"valor de j"<<j<<"materias"<<indiceMaterias;
-					cout
-							<< "\n\n\n************************************************\n";
-					cout << "\t*La materia es: "
-							<< arregloMaterias[j].getNombre() << "*" << endl;
-					cout << "\t*El profesor es: "
-							<< arregloMaterias[j].getProfesor() << "*" << endl;
-					cout << "\t*Los creditos son: "
-							<< arregloMaterias[j].getNumeroCreditos() << "*"
-							<< endl;
-					cout << "\t*Su id es: " << arregloMaterias[j].getIdMateria()
-							<< "*" << endl;
-					cout
-							<< "\n*****************************************************";
+            for (int j = 0; j < 2; j++) {
+				cout << "idMAteria " << arregloMaterias[j].getIdMateria()<< " Alumno y su idmateria "<< arregloAlumnos[i].getIdArregloIdMaterias(j)<<endl;
+				if (arregloMaterias[j].getIdMateria() == arregloAlumnos[i].getIdArregloIdMaterias(j)
+        ||arregloMaterias[j].getIdMateria() == arregloAlumnos[i].getIdArregloIdMaterias(j+1) ) {
+					cout<<"valor de i: "<<i<<"valor de j: "<<j<<"numAlumnos"<<indiceAlumnos;
+					cout<< "\n\n\n************************************************\n";
+					cout<< "\t*La materia es: "<< arregloMaterias[j].getNombre()<< "\t*" << endl;
+					cout << "\t*El profesor es: "<< arregloMaterias[j].getProfesor()<< "\t*" << endl;
+					cout << "\t*Los creditos son: "<< arregloMaterias[j].getNumeroCreditos()<< "\t*"<< endl;
+					cout << "\t*Su id es: " << arregloMaterias[j].getIdMateria()<< "\t\t*" << endl;
+					cout<< "\n*****************************************************";
 				}
+
+				cout<<"j: "<<j<<endl;
 			}
-			cout
-					<< "\n-------------------------------------------------------------------------";
+			cout<< "\n-------------------------------------------------------------------------";
 			//}
 		}
 	}
