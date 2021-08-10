@@ -13,7 +13,7 @@ int elementos = 1;
 int indiceAlumnos = 0, indiceProfesores = 0, indiceMaterias = 0;
 void leerAlumnos() {
 
-	cout << "---iA->" << indiceAlumnos << "..elementos.." << elementos;
+	//cout << "---iA->" << indiceAlumnos << "..elementos.." << elementos;
 	//for(int i=indiceAlumnos; i<elementos;i++){
 	string auxNombre, auxAPaterno, auxSexo;
 	int auxEdad, auxNumCtrlEscolar, auxSemestre, auxIdMateria;
@@ -36,22 +36,16 @@ void leerAlumnos() {
 
 	Alumno alumno(auxNombre, auxAPaterno, auxSexo, auxEdad, auxNumCtrlEscolar,
 			auxSemestre, auxIdMateria);
-	// Alumno alumno(auxNombre,"cena","masculino",45,100,8);
-	//Alumno alumno(auxNombre,auxAPaterno,auxSexo,auxEdad,auxNumCtrlEscolar,auxSemestre,auxIdMateria,0,auxIdMateria);
 	for (int i = 0; i < 2; i++) {
 		cout << "\tEscriba el ID de la materias ";
 		cin >> auxIdMateria;
 		alumno.setIdArregloIdMaterias(i, auxIdMateria);
 	}
-	//cout<<"materias"<<alumno.getIdArregloIdMaterias(0);
-	// cout<<"---iA->"<<indiceAlumnos<<"..elementos.."<<elementos;
-
 	arregloAlumnos[indiceAlumnos] = alumno;
 	indiceAlumnos++;
 }
 
 void validarAlumnos() {
-
 	string auxNombre;
 	fflush (stdin);
 	cout << "\n\tEscribe el nombre del cliente a buscar: ";
@@ -135,8 +129,6 @@ void mostrarMaterias() {
 }
 
 void leerProfesor() {
-	//for (int i = 0; i <elementos ; i++)
-	//{
 	string auxNombre, auxAPaterno, auxAMaterno, auxSexo, auxProfesion;
 	int auxEdad, auxNumCedulaProfesional;
 	float auxMontoCuenta;
@@ -153,26 +145,17 @@ void leerProfesor() {
 	getline(cin, auxSexo);
 	cout << "\tEscribe la edad ";
 	cin >> auxEdad;
-	//cout << "\tEscribe el titulo o profesion ";
-	//getline (cin, auxProfesion);
-	//cout << "\tEscribe No. de cedula profesional ";
-	//cin >> auxNumCedulaProfesional;
 	Profesor profesor(auxNombre, auxAPaterno, auxAMaterno, auxSexo, auxEdad,
 			auxProfesion, auxNumCedulaProfesional);
 
 	arregloProfesores[indiceProfesores] = profesor;
 	indiceProfesores++;
-	//}
+
 }
 
 void validarProfesor() {
 
 	string auxNombre;
-	// fflush(stdin);
-	// cout << "\n\tEscribe el nombre del profesor a buscar: ";
-	// getline (cin, auxNombre);
-	cout << "---iA->" << indiceAlumnos << "..elementos.." << elementos;
-
 	for (int i = 0; i < indiceProfesores; i++) {
 		// if (arregloProfesores[i].getNombre() == auxNombre)
 		//{
