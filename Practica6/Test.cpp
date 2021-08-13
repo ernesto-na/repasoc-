@@ -1,4 +1,3 @@
-#include"Persona.h"
 #include"Cliente.h"
 #include <stdio.h>
 #include<iostream>
@@ -10,6 +9,10 @@ using namespace std;
             {
                    cout<<"Hola persona";
                    Persona persona;
-                   persona.leerPersona();
-                   persona.mostrarPersona();
+                   //persona.leerPersona();
+                   //persona.mostrarPersona();
+
+                   Cliente cliente;
+                   cliente.leerCliente();
+                   cliente.mostrarCliente();
             }
